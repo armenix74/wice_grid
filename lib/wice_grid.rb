@@ -223,12 +223,12 @@ module Wice
 
     # declare_column(String, ActiveRecord, CustomFilterSpec, nil | string, nil | Boolean)
     def declare_column(
-                 column_name: nil,
-                 model: nil,
-                 custom_filter_active: nil,
-                 table_alias: nil,
-                 filter_type: nil,
-                 assocs: [])  #:nodoc:
+                 column_name = nil,
+                 model = nil,
+                 custom_filter_active = nil,
+                 table_alias = nil,
+                 filter_type = nil,
+                 assocs = [])  #:nodoc:
 
 
       @options[:include] = Wice.build_includes(@options[:include], assocs)
