@@ -173,7 +173,7 @@ module Wice
 
   module ConfigurationProvider #:nodoc:
     class << self
-      def value_for(key, strict: true) #:nodoc:
+      def value_for(key, strict = true) #:nodoc:
         if Wice::Defaults.const_defined?(key)
           Wice::Defaults.const_get(key)
         else
